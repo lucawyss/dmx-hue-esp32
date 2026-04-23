@@ -16,29 +16,28 @@ Supported microcontroller :
 Supported bulbs :
   - Philips Hue Ambient White bulbs
 
-1. GET A HUE API KEY
-  In Chrome, go to http://<BRIDGE_IP>/debug/clip.html
-  Click the bridge button, then:
-  POST http://<BRIDGE_IP>/api
-  Body: {"devicetype":"artnet_bridge#esp"}
-  The response contains your "username" (= API key).
+## HOW TO
+### Get a Hue API key
+  - In Chrome, go to http://<BRIDGE_IP>/debug/clip.html
+  - Click the bridge button, then:
+    `POST http://<BRIDGE_IP>/api`
+    Body: `{"devicetype":"artnet_bridge#esp"}`
+  - The response contains your "username" (= API key).
 
-2. CONFIGURATION ON THE SCRIPT
-   The WIFI setting and the BRIDGE settings are at the start of the script.
+### Configuration settings
+   - The WIFI setting and the BRIDGE settings are at the start of the script.
 
-3. AUTOMATIC DISCOVERY
-  At boot, the script queries GET /api/<key>/lights,
-  sorts the bulbs by ascending ID, and assigns
-  2 consecutive DMX channels to each.
-  The table is displayed on the serial port.
+### Automatic bulbs discovery
+  - At boot, the script queries GET /api/<key>/lights, sorts the bulbs by ascending ID, and assigns 2 consecutive DMX channels to each.
+  - The table is displayed on the serial port.
 
-4. DMX MAPPING (2 channels per bulb)
-Channel N+0: Dimmer 0 = off, 1-255 = bright, 1-254 = on
-Channel N+1: Temperature 0 = cool → 255 = warm
+### DMX Mapping (2 channels per bulb)
+  - Channel N+0: Dimmer 0 = off, 1-255 = bright, 1-254 = on
+  - Channel N+1: Temperature 0 = cool → 255 = warm
 
-5. TEMPERATURE RANGE
-Hue White Ambiance: CT_COLD=153, CT_WARM=500
-Hue White (simple): CT_COLD=370, CT_WARM=500
+### Color temperature range (CCT)
+  - Hue White Ambiance: CT_COLD=153, CT_WARM=500
+  - Hue White (simple): CT_COLD=370, CT_WARM=500
 
-6. HUE API LIMITS
-~10 requests/sec max → HUE_MIN_INTERVAL_MS = 100 ms
+### Hue API limits
+  - ~10 requests/sec max → HUE_MIN_INTERVAL_MS = 100 ms
