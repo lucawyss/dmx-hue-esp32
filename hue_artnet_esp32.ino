@@ -70,22 +70,22 @@
 // ═══════════════════════════════════════════════════════════════
 
 // Wi-Fi
-const char* WIFI_SSID     = "Lumiere_600";
-const char* WIFI_PASSWORD = "Lumiere13";
+const char* WIFI_SSID     = "WIFI_NAME";
+const char* WIFI_PASSWORD = "PASSWORD";
 
 // IP statique de l'ESP
-IPAddress STATIC_IP (10, 10, 60, 3);   // IP fixe de l'ESP
-IPAddress GATEWAY (10, 10, 60, 1);      // Passerelle (box/routeur)
+IPAddress STATIC_IP (10, 10, 10, 3);   // IP fixe de l'ESP
+IPAddress GATEWAY (10, 10, 10, 1);      // Passerelle (box/routeur)
 IPAddress SUBNET (255, 0, 0, 0);        // Masque de sous-réseau
-IPAddress DNS_PRIMARY (10, 10, 60, 1);   // DNS primaire
+IPAddress DNS_PRIMARY (10, 10, 10, 1);   // DNS primaire
 IPAddress DNS_SECOND ( 8,   8,   4,   4);   // DNS secondaire
 
-// Pont Philips Hue 600
-const char* HUE_BRIDGE_IP = "10.10.60.2";   // IP de votre pont Hue
-const char* HUE_API_KEY   = "Km5ydvSRjmou6Od0dCnC9f5JNv-7IHbTuCsDkm0u";  // Clé obtenue via /api
+// Pont Philips Hue
+const char* HUE_BRIDGE_IP = "10.10.10.2";   // IP de votre pont Hue
+const char* HUE_API_KEY   = "HUE_BRIDGE_API_KEY";  // Clé obtenue via /api
 
 // Univers ArtNet à écouter
-const uint16_t ARTNET_UNIVERSE = 4;
+const uint16_t ARTNET_UNIVERSE = 0;
 
 // Adresse DMX de départ (0-based, ex: 0 = DMX 1)
 const uint16_t DMX_START_ADDRESS = 0;
