@@ -14,7 +14,7 @@ Supported microcontroller :
   - ESP8266   (Wemos D1 Mini, NodeMCU…)
 
 Supported bulbs :
-  - Philips Hue Ambient White bulbs
+  - Philips Hue White Ambiance bulbs
 
 ## HOW TO
 ### Get a Hue API key
