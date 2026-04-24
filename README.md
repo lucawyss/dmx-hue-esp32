@@ -41,3 +41,7 @@ Supported bulbs :
 
 ### Hue API limits
   - ~10 requests/sec max → HUE_MIN_INTERVAL_MS = 100 ms
+
+
+
+![](Hue-DMX-ESP32.jpg)
